@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head') %>
+    <title>Fale Conosco</title>
+</head>
+<body>
+    <header>
+        <%- include('../partials/header') %>
+    </header>
+    
+    <div class="container">
+        <form method="POST" action="meuspedidos.php">
+            <h2 class="titulo-pedido">Enviar mensagem</h2>
+            <div class="form-group">
+                <label class="text-white" for="nome">Nome</label>
+                <input type="text" class="form-control bg-transparent" name="nome" id="nome">
+            </div>
+
+            <div class="form-group">
+                <label class="text-white" for="nome">Mensagem</label>
+                <textarea type="text" class="form-control bg-transparent" name="nome" id="nome"></textarea>
+            </div>
+
+            <button class="btn btn-primary" name="enviar" type="submit">Enviar</button>
+        </form>
+    </div><!-- container -->
+</body>
+</html>

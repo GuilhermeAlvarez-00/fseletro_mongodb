@@ -1,0 +1,29 @@
+.stores{
+    margin: 20px 0;
+    color: white;
+    text-align: center;
+}
+
+.stores .locations{
+    text-align: left;
+    width: 400px;
+    background-color: rgb(27, 27, 27);
+    border-radius: 5px;
+    display: inline-block;
+    margin: 10px;
+    padding: 20px;
+    height: 280px;
+}
+
+.stores .locations h3{
+    margin: 20px 0;
+}
+
+.stores .locations p{
+    margin: 10px 0;
+}
+
+.stores .locations h3{
+    color: royalblue;
+    border-bottom: 1px solid royalblue;
+}

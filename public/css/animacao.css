@@ -1,0 +1,35 @@
+.animate-up{
+    animation-name: up;
+    animation-duration: 400ms;
+    animation-fill-mode: backwards;
+}
+
+.animate-right{
+    animation-name: right;
+    animation-duration: 300ms;
+    animation-fill-mode: backwards;
+}
+
+@keyframes up{
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+    from{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+}
+
+@keyframes right{
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+    from{
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+}
+
+

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head') %>
+    <title>Pedidos</title>
+</head>
+<body>
+    <header>
+        <%- include('../partials/header') %>
+    </header>
+
+    <form method="POST" action="meuspedidos.php">
+        <h2 class="titulo-pedido">Faça sua compra</h2>
+        <div class="form-group">
+            <label class="text-white" for="nome">Nome</label>
+            <input type="text" class="form-control bg-transparent" name="nome" id="nome" required>
+        </div>
+
+        <div class="form-group">
+            <label class="text-white" for="endereco">Endereço</label>
+            <input type="text" class="form-control bg-transparent" name="endereco" id="endereco" required>
+        </div>
+
+        <div class="form-group">
+            <label class="text-white" for="telefone">Telefone</label>
+            <input type="text" class="form-control bg-transparent" name="telefone" id="telefone" required>
+        </div>
+        <div class="form-group">
+            <label for="produto" class="text-white">Produto</label>
+            <select name="produto" class="select form-control bg-transparent" id="produto">
+                <% for(i = 0; i < dados.length; i++){ %>
+                <option class="option">
+                    <%=dados[i].descricao%>
+                </option>
+                <% } %>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label class="text-white" for="preco">Preço R$</label>
+            <input type="text" class="form-control bg-transparent" name="preco" id="preco" required>
+        </div>
+
+        <div class="form-group">
+            <label class="text-white" for="quantidade">Quantidade</label>
+            <input type="text" class="form-control bg-transparent" name="quantidade" id="quantidade" required>
+        </div>
+
+        <div class="form-group">
+            <label class="text-white" for="total">Valor Total</label>
+            <input type="text" class="form-control bg-transparent" name="total" id="total" required>
+        </div>
+
+        <button class="btn btn-primary" name="enviar" type="submit">Enviar</button>
+        <a href="produtos2.php" class="btn btn-danger">Cancelar</a>
+    </form>
+
+</body>
+</html>

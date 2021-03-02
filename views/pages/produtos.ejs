@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head') %>
+    <title>Produtos</title>
+</head>
+<body>
+    <header>
+        <%- include('../partials/header') %>
+    </header>
+
+    <section class="container-principal">
+
+        <div class="category">
+            <h2>Categorias</h2>
+            <ul class="list-group">
+                <li class="list-group-item d-flex justify-content-between align-items-center bg-transparent" onclick="exibirTodos()">
+                    Todos
+                    <span class="badge badge-primary badge-pill">13</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center bg-transparent" onclick="exibirCategorias('celular')">
+                    Celular
+                    <span class="badge badge-primary badge-pill">4</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center bg-transparent" onclick="exibirCategorias('notebook')">
+                    Notebook
+                    <span class="badge badge-primary badge-pill">3</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center bg-transparent" onclick="exibirCategorias('console')">
+                    Consoles
+                    <span class="badge badge-primary badge-pill">3</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center bg-transparent" onclick="exibirCategorias('televisao')">
+                    Televisões
+                    <span class="badge badge-primary badge-pill">3</span>
+                </li>
+            </ul>
+        </div>
+    
+        <div class="container container-product">
+            <% for(i = 0; i < dados.length; i++){ %>
+                <div class="product card card-body" id="<%=dados[i].categoria%>">
+                    <div class="container img-product"><img class="card-img-top" src="<%=dados[i].nomeimagem%>" alt="Galaxy S10" title="Galaxy S10"></div>
+
+                    <div class="title-product">
+                        <p class="card-text"><%=dados[i].descricao%></p>
+                    </div>
+
+                    <div class="price-product">
+                        <h3 class="canceled">R$ <%=dados[i].precovenda%></h3>
+                        <h2>R$ <%=dados[i].precovenda%></h2>
+                    </div>
+
+                    <div class="button-buy">
+                        <a class="buy btn btn-block text-white" href="/pedidos">Comprar</a>
+                    </div>
+                </div><!-- product -->
+            <%}%>
+    
+        </div><!-- container-product -->
+        <div class="clear"></div>
+    
+    </section><!-- container -->
+</body>
+</html>
